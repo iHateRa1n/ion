@@ -53,7 +53,7 @@ def ion(c):
             elif cc[cc.index(item) - 1] == 'if':
                 args = cc[cc.index(item) + 1:]
                 try:
-                    if eval(args[0]) == args[1]:
+                    if eval(args[0]) == eval(args[1]):
                         exec('ion("' + eval('  '.join(args[2:])) + '")')
                 except:
                     pass
